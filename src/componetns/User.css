@@ -1,0 +1,21 @@
+.user {
+    margin-bottom: 10px;
+    padding-left: 1rem;
+    border: white solid thin;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 2px black;
+    display: flex;
+}
+
+.user:hover{
+    border-color: #3a3a3a;
+    box-shadow: 5px 5px 3px #3a3a3a;
+}
+
+.user_name {
+    width: 30%;
+}
+
+.user_old {
+    width: 60%;
+}

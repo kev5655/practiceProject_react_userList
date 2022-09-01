@@ -1,0 +1,85 @@
+:root {
+    --errorCard_height: 20vh;
+    --errorCard_width: 42vh;
+    --errorCard_shadow_size: 1vh;
+    --errorCard_header_height: 11vh;
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .errorCard {
+        width: 70% !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .errorCard {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .errorCard {
+        width: 600px !important;
+    }
+}
+
+.errorCard{
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    right: 0;
+    width: 40%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 1rem;
+    background: linear-gradient(to top,
+        #d3d3d3 0%,
+        #d3d3d3 60%,
+        #9400d3 60%,
+        #9400d3 100%);
+    box-shadow: none;
+}
+
+.errorCard:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:  103%;
+    height: 110%;
+    /* height: calc(var(--errorCard_height) + var(--errorCard_shadow_size)); */
+    opacity: 1;
+    border-radius: 1.5rem;
+
+    /* Declaring our shadow color inherit from the parent (button) */
+    background: inherit;
+
+    /* Blurring the element for shadow effect */
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(10px);
+}
+
+.errorCard_header{
+    margin-top: 6%;
+    margin-left: 3%;
+    font-size: 1.2rem;
+}
+
+.errorCard_description {
+    margin-top: 6%;
+    margin-left: 3%;
+}
+
+.errorCard Button{
+    display: block;
+    margin: 6% 3% 3% auto;
+}
